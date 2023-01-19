@@ -192,7 +192,7 @@ class  AccountRegistration(TemplateView):
              paramas['晩P']=paramas['晩']*0.2/4
              paramas['晩F']=paramas['晩']*0.2/9
              paramas['晩C']=paramas['晩']*0.6/4
-             userinfo = UserInfo(登録名 = request.POST['名前'], 目標カロリー = paramas['目標カロリー'], 朝P = paramas['朝P'], 朝F = paramas['朝F'], 朝C = paramas['朝C'], 昼P = paramas['昼P'], 昼F = paramas['昼F'], 昼C = paramas['昼C'], 夜P = paramas['晩P'], 夜F = paramas['晩F'], 夜C = paramas['晩C'], アレルギー = paramas['アレルギー'] )
+             userinfo = UserInfo(登録名 = request.POST['名前'], 朝カロリー = (paramas['目標カロリー']*3/10), 昼カロリー = (paramas['目標カロリー']*3/10), 夜カロリー = (paramas['目標カロリー']*4/10),朝P = paramas['朝P'], 朝F = paramas['朝F'], 朝C = paramas['朝C'], 昼P = paramas['昼P'], 昼F = paramas['昼F'], 昼C = paramas['昼C'], 夜P = paramas['晩P'], 夜F = paramas['晩F'], 夜C = paramas['晩C'], アレルギー = paramas['アレルギー'] )
 
             # アカウント情報をDB保存
              account = self.params["account_form"].save()
