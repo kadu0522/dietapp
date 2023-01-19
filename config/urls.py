@@ -19,6 +19,6 @@ from django.urls import path, include
 from django.contrib import admin
 
 urlpatterns = [
-    path('sotuken/',include('sotuken.urls')),
+    path('',include('sotuken.urls')),
     path('admin/', admin.site.urls),
 ]
